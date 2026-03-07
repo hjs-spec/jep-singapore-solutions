@@ -10,9 +10,9 @@ This repository provides complete **Judgment Event Protocol (JEP)** implementati
 
 | Framework | Issuer | JEP Solution |
 |------|----------|-------------|
-| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [Agentic AI Accountability Implementation →](/framework-agentic) |
-| **AI Verify Testing Framework** | IMDA | [AI Verify Accountability Plugin →](/framework-ai-verify) |
-| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit Evidence Export →](/framework-aim-toolkit) |
+| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [Agentic AI Accountability Implementation →](/singapore/agentic-framework) |
+| **AI Verify Testing Framework** | IMDA | [AI Verify Accountability Plugin →](/singapore/ai-verify) |
+| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit Evidence Export →](/singapore/aim-toolkit) |
 
 ## 🔍 Why JEP?
 
@@ -26,9 +26,9 @@ This repository provides complete **Judgment Event Protocol (JEP)** implementati
 
 | Industry | Regulator | Example Scenario | Solution |
 |------|----------|----------|----------|
-| Financial Services | MAS | DBS Bank loan approval AI | [View →](/framework-agentic/examples/financial-services.py) |
-| Healthcare | MOH | Singapore General Hospital diagnostic AI | [View →](/framework-agentic/examples/healthcare.py) |
-| Public Sector | GovTech | CPF advisory AI assistant | [View →](/framework-agentic/examples/public-sector.py) |
+| Financial Services | MAS | DBS Bank loan approval AI | [View →](/singapore/agentic-framework/examples/financial-services.py) |
+| Healthcare | MOH | Singapore General Hospital diagnostic AI | [View →](/singapore/agentic-framework/examples/healthcare.py) |
+| Public Sector | GovTech | CPF advisory AI assistant | [View →](/singapore/agentic-framework/examples/public-sector.py) |
 
 ## 🚀 Quick Start
 
@@ -58,9 +58,9 @@ JEP is stewarded by **HJS Foundation LTD** (Singapore CLG), a non-profit organiz
 
 | Framework | Core Requirement | JEP Feature | Verification |
 |-----------|-----------------|-------------|--------------|
-| **Agentic AI Framework** | Meaningful human oversight | `delegate()` primitive + Ed25519 signature | [verify-agentic.py](/framework-agentic/tests/verify-agentic.py) |
-| **AI Verify** | Accountability principle | Four primitives + audit chain | [verify-ai-verify.py](/framework-ai-verify/tests/verify-ai-verify.py) |
-| **AIM Toolkit** | 49 accountability checks | Complete responsibility records | [verify-aim.py](/framework-aim-toolkit/tests/verify-aim.py) |
+| **Agentic AI Framework** | Meaningful human oversight | `delegate()` primitive + Ed25519 signature | [verify-agentic.py](/singapore/agentic-framework/tests/verify-agentic.py) |
+| **AI Verify** | Accountability principle | Four primitives + audit chain | [verify-ai-verify.py](/singapore/ai-verify/tests/verify-ai-verify.py) |
+| **AIM Toolkit** | 49 accountability checks | Complete responsibility records | [verify-aim.py](/singapore/aim-toolkit/tests/verify-aim.py) |
 
 ## 📬 Contact
 
@@ -73,19 +73,20 @@ JEP is stewarded by **HJS Foundation LTD** (Singapore CLG), a non-profit organiz
 ```
 jep-singapore-solutions/
 ├── README.md                           # This file
-├── framework-agentic/                   # Agentic AI Framework (2026)
-│   ├── README.md                        # Solution overview
-│   ├── mapping.md                        # Detailed mapping to framework
-│   ├── implementation/                    # Core implementation
-│   └── examples/                          # Industry use cases
-├── framework-ai-verify/                  # AI Verify Framework
-│   ├── README.md                         # Solution overview
-│   ├── accountability-plugin.py           # AI Verify plugin
-│   └── sample-report.json                 # Report format
-└── framework-aim-toolkit/                # AIM Toolkit
-    ├── README.md                          # Solution overview
-    ├── 49-checks-mapping.md                # 49 checks alignment
-    └── export-script.py                     # AIM report export
+├── singapore/                           # Singapore solutions root
+│   ├── agentic-framework/                # Agentic AI Framework (2026)
+│   │   ├── README.md                     # Solution overview
+│   │   ├── mapping.md                     # Detailed mapping to framework
+│   │   ├── implementation/                 # Core implementation
+│   │   └── examples/                       # Industry use cases
+│   ├── ai-verify/                         # AI Verify Framework
+│   │   ├── README.md                      # Solution overview
+│   │   ├── accountability-plugin.py        # AI Verify plugin
+│   │   └── sample-report.json              # Report format
+│   └── aim-toolkit/                       # AIM Toolkit
+│       ├── README.md                       # Solution overview
+│       ├── 49-checks-mapping.md             # 49 checks alignment
+│       └── export-script.py                  # AIM report export
 ```
 
 ---
