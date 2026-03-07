@@ -103,5 +103,5 @@ jep-singapore-solutions/
 
 ---
 
-*Designed in Singapore 🇸🇬, for the world 🌏*
+*Designed for Singapore 🇸🇬, for the world 🌏*
 ```
