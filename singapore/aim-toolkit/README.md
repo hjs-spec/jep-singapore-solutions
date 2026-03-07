@@ -1,3 +1,9 @@
+# JEP for AIM Toolkit - Competition & Consumer Protection Evidence Export
+
+**Export JEP compliance evidence for CCS + IMDA's AI Markets (AIM) Toolkit**
+
+## 📋 Overview
+
 The **JEP AIM Toolkit Exporter** enables organizations to generate verifiable compliance evidence for the **AI Markets (AIM) Toolkit**, developed by the Competition and Consumer Commission of Singapore (CCS) in collaboration with IMDA.
 
 This exporter helps businesses:
