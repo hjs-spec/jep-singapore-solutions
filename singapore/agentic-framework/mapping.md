@@ -646,7 +646,7 @@ python tests/verify-all-pillars.py
 | [implementation/accountability.py](./implementation/accountability.py) | Core implementation code |
 | [tests/verify-all-pillars.py](./tests/verify-all-pillars.py) | Complete verification script |
 | [examples/financial-services.py](./examples/financial-services.py) | MAS-regulated example |
-| [examples/healthcare.py](./examples/healthcare.py) | MOH-regulated example |
+| [examples/healthcare.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/examples/healthcare.py) | MOH-regulated example |
 | [examples/public-sector.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/examples/public-sector.py) | GovTech example |
 
 ---
