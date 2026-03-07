@@ -315,12 +315,12 @@ python aim-toolkit/export-script.py --company "DBS Bank" --period Q1-2026
 
 | File | Description |
 |------|-------------|
-| [mapping.md](mapping.md) | Detailed mapping to all 16 framework requirements with code examples |
-| [implementation/accountability.py](implementation/accountability.py) | Core implementation with comprehensive comments |
-| [examples/financial-services.py](examples/financial-services.py) | Complete banking example with MAS compliance |
-| [examples/healthcare.py](examples/healthcare.py) | Complete healthcare example with MOH compliance |
-| [examples/public-sector.py](examples/public-sector.py) | Complete public sector example with GovTech compliance |
-| [tests/verify-all-pillars.py](tests/verify-all-pillars.py) | One-command verification script |
+| [mapping.md](/singapore/agentic-framework/mapping.md) | Detailed mapping to all 16 framework requirements with code examples |
+| [implementation/accountability.py](/singapore/agentic-framework/implementation/accountability.py) | Core implementation with comprehensive comments |
+| [examples/financial-services.py](/singapore/agentic-framework/examples/financial-services.py) | Complete banking example with MAS compliance |
+| [examples/healthcare.py](/singapore/agentic-framework/examples/healthcare.py) | Complete healthcare example with MOH compliance |
+| [examples/public-sector.py](/singapore/agentic-framework/examples/public-sector.py) | Complete public sector example with GovTech compliance |
+| [tests/verify-all-pillars.py](/singapore/agentic-framework/tests/verify-all-pillars.py) | One-command verification script |
 
 ## 🚦 Getting Started Path
 
