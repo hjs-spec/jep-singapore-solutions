@@ -643,7 +643,7 @@ python tests/verify-all-pillars.py
 
 | File | Description |
 |------|-------------|
-| [implementation/accountability.py](./implementation/accountability.py) | Core implementation code |
+| [implementation/accountability.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/implementation/accountability.py)| Core implementation code |
 | [tests/verify-all-pillars.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/tests/verify-all-pillars.py) | Complete verification script |
 | [examples/financial-services.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/examples/financial-services.py)| MAS-regulated example |
 | [examples/healthcare.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/examples/healthcare.py) | MOH-regulated example |
