@@ -26,7 +26,7 @@ This repository provides complete **Judgment Event Protocol (JEP)** implementati
 
 | Industry | Regulator | Example Scenario | Solution |
 |------|----------|----------|----------|
-| Financial Services | MAS | DBS Bank loan approval AI | [View →](/singapore/agentic-framework/examples/financial-services.py) |
+| Financial Services | MAS | DBS Bank loan approval AI | [View →](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/examples/financial-services.py) |
 | Healthcare | MOH | Singapore General Hospital diagnostic AI | [View →](/singapore/agentic-framework/examples/healthcare.py) |
 | Public Sector | GovTech | CPF advisory AI assistant | [View →](/singapore/agentic-framework/examples/public-sector.py) |
 
