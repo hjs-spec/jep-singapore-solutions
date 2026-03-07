@@ -25,18 +25,10 @@ The framework consists of four pillars. For each pillar, we map JEP's technical 
 
 | Requirement | JEP Feature | Implementation | Verification |
 |-------------|-------------|----------------|--------------|
-| **1.1 (Use case assessment)** | `judge()` primitive records the assessment outcome | ```python
-proposal = tracker.judge_action(
-    action="EXECUTE_PAYMENT",
-    use_case="CROSS_BORDER_TRANSFER",
-    assessment="APPROPRIATE",
-    risk_level="HIGH"
-)
-``` | Check `use_case` and `assessment` fields in receipt |
-| **1.2 (Autonomy vs risk)** | Risk level field in every receipt | `receipt.compliance_binding.risk_level` | Verify risk level is set (LOW/MEDIUM/HIGH/CRITICAL) |
-| **1.3 (Scope boundaries)** | `resource` field defines the target scope | ```python
-receipt = tracker.log_decision(resource="payment://international/<=10000",...)``` | Verify operation is within defined resource boundary |
-| **1.4 (Documentation)** | Complete audit trail with timestamps | All receipts are stored with immutable timestamps | Run `verify-audit-chain.py` |
+| 1.1 (Use case assessment) | judge() primitive records the assessment outcome | proposal = tracker.judge_action(action="EXECUTE_PAYMENT", use_case="CROSS_BORDER_TRANSFER", assessment="APPROPRIATE", risk_level="HIGH") | Check use_case and assessment fields in receipt |
+| 1.2 (Autonomy vs risk) | Risk level field in every receipt | receipt.compliance_binding.risk_level | Verify risk level is set (LOW/MEDIUM/HIGH/CRITICAL) |
+| 1.3 (Scope boundaries) | resource field defines the target scope | receipt = tracker.log_decision(resource="payment://international/<=10000", ...) | Verify operation is within defined resource boundary |
+| 1.4 (Documentation) | Complete audit trail with timestamps | All receipts are stored with immutable timestamps | Run verify-audit-chain.py |
 
 ### Evidence Files
 
@@ -61,29 +53,10 @@ receipt = tracker.log_decision(resource="payment://international/<=10000",...)``
 
 | Requirement | JEP Feature | Implementation | Verification |
 |-------------|-------------|----------------|--------------|
-| **2.1 (Human oversight points)** | `delegate()` primitive requires human approval | ```python
-receipt = tracker.delegate_action(
-    proposal_id=prop.id,
-    human_approver="supervisor-456",
-    approval_time=timestamp,
-    understanding_confirmed=True
-)
-``` | Check `human_approver` field exists |
-| **2.2 (Meaningful oversight)** | Full context provided to human before approval | ```python
-# Human sees complete context before approving
-print(f"Action: {proposal.action}")
-print(f"Amount: {proposal.amount} {proposal.currency}")
-print(f"Risk: {proposal.risk_level}")
-print(f"Reasoning: {proposal.reasoning}")```|Verify receipt contains complete `compliance_binding` context|
-| **2.3 (Documented oversight)** | Ed25519 signature provides non-repudiable proof | `receipt.signature` field | Run `verify-signature.py` |
-| **2.4 (Accountability chains)** | Complete chain from `judge` → `delegate` → `terminate` | ```json
-{
-  "chain": [
-    {"action": "judge", "actor": "agent-123", "time": "t1"},
-    {"action": "delegate", "actor": "human-456", "time": "t2"},
-    {"action": "execute", "actor": "agent-123", "time": "t3"}
-  ]
-}``` | Run `verify-accountability-chain.py` |
+| 2.1 (Human oversight points) | delegate() primitive requires human approval | receipt = tracker.delegate_action(proposal_id=prop.id, human_approver="supervisor-456", approval_time=timestamp, understanding_confirmed=True) | Check human_approver field exists |
+| 2.2 (Meaningful oversight) | Full context provided to human before approval | print(f"Action: {proposal.action}") print(f"Amount: {proposal.amount} {proposal.currency}") print(f"Risk: {proposal.risk_level}") print(f"Reasoning: {proposal.reasoning}") | Verify receipt contains complete compliance_binding context |
+| 2.3 (Documented oversight) | Ed25519 signature provides non-repudiable proof | receipt.signature field | Run verify-signature.py |
+| 2.4 (Accountability chains) | Complete chain from judge → delegate → terminate | {"chain": [{"action": "judge", "actor": "agent-123", "time": "t1"}, {"action": "delegate", "actor": "human-456", "time": "t2"}, {"action": "execute", "actor": "agent-123", "time": "t3"}]} | Run verify-accountability-chain.py |
 
 ### Evidence Files
 
@@ -108,15 +81,10 @@ print(f"Reasoning: {proposal.reasoning}")```|Verify receipt contains complete `c
 
 | Requirement | JEP Feature | Implementation | Verification |
 |-------------|-------------|----------------|--------------|
-| **3.1 (Lifecycle controls)** | Four primitives cover full lifecycle | ```
-judge()    # Assessment phase
-delegate() # Approval phase  
-execute()  # Action phase
-terminate() # Completion/termination phase``` | Run `verify-lifecycle.py` |
-| **3.2 (Least privilege)** | Resource field limits scope of action | `resource` defines exactly what can be accessed | Verify resource strings match intended scope |
-| **3.3 (Audit logs)** | Complete immutable audit trail | All receipts stored with parent_hash chain | Run `verify-audit-integrity.py` |
-| **3.4 (Regular testing)** | Automated verification scripts | ```bash
-python tests/verify-all-controls.py``` | Script runs all control tests and generates report |
+| 3.1 (Lifecycle controls) | Four primitives cover full lifecycle | judge() | delegate() | execute() | terminate() | Run verify-lifecycle.py |
+| 3.2 (Least privilege) | Resource field limits scope of action | resource defines exactly what can be accessed | Verify resource strings match intended scope |
+| 3.3 (Audit logs) | Complete immutable audit trail | All receipts stored with parent_hash chain | Run verify-audit-integrity.py |
+| 3.4 (Regular testing) | Automated verification scripts | python tests/verify-all-controls.py | Script runs all control tests and generates report |
 
 ### Evidence Files
 
@@ -141,25 +109,10 @@ python tests/verify-all-controls.py``` | Script runs all control tests and gener
 
 | Requirement | JEP Feature | Implementation | Verification |
 |-------------|-------------|----------------|--------------|
-| **4.1 (Disclosure)** | Machine-readable metadata enables automated disclosure | ```json
-{
-  "is_ai_generated": true,
-  "agent_id": "customer-support-v2"
-}
-``` | Check `is_ai_generated` field in content provenance |
-| **4.2 (Challenge mechanism)** | Complete audit trail enables reconstruction | All decisions can be reconstructed from receipts | Run `verify-reconstruct.py [receipt_id]` |
-| **4.3 (Transparency)** | JSON-LD provides structured, parseable context | ```json
-{
-  "operation": "APPROVE_LOAN",
-  "reasoning": "Credit score > 700, DTI < 40%",
-  "model_version": "v2.1.3"
-}``` | Parse receipt fields for human-readable explanations |
-| **4.4 (Feedback)** | Extended fields support feedback integration | ```python
-receipt.add_feedback(
-    user_id="customer-789",
-    feedback_type="DISPUTE",
-    timestamp=time.time()
-)``` | Check feedback fields in extended metadata |
+| 4.1 (Disclosure) | Machine-readable metadata enables automated disclosure | {"is_ai_generated": true, "agent_id": "customer-support-v2"} | Check is_ai_generated field in content provenance |
+| 4.2 (Challenge mechanism) | Complete audit trail enables reconstruction | All decisions can be reconstructed from receipts | Run verify-reconstruct.py [receipt_id] |
+| 4.3 (Transparency) | JSON-LD provides structured, parseable context | {"operation": "APPROVE_LOAN", "reasoning": "Credit score > 700, DTI < 40%", "model_version": "v2.1.3"} | Parse receipt fields for human-readable explanations |
+| 4.4 (Feedback) | Extended fields support feedback integration | receipt.add_feedback(user_id="customer-789", feedback_type="DISPUTE", timestamp=time.time()) | Check feedback fields in extended metadata |
 
 ### Evidence Files
 
@@ -173,14 +126,16 @@ receipt.add_feedback(
 
 | Pillar | Requirements Covered | Verification Method | Status |
 |--------|---------------------|---------------------|--------|
-| **1: Assess Risk** | 1.1, 1.2, 1.3, 1.4 | `verify-pillar1.py` | ✅ **Complete** |
-| **2: Human Accountability** | 2.1, 2.2, 2.3, 2.4 | `verify-pillar2.py` | ✅ **Complete** |
-| **3: Technical Controls** | 3.1, 3.2, 3.3, 3.4 | `verify-pillar3.py` | ✅ **Complete** |
-| **4: End-User Responsibility** | 4.1, 4.2, 4.3, 4.4 | `verify-pillar4.py` | ✅ **Complete** |
+| 1: Assess Risk | 1.1, 1.2, 1.3, 1.4 | verify-pillar1.py | ✅ Complete |
+| 2: Human Accountability | 2.1, 2.2, 2.3, 2.4 | verify-pillar2.py | ✅ Complete |
+| 3: Technical Controls | 3.1, 3.2, 3.3, 3.4 | verify-pillar3.py | ✅ Complete |
+| 4: End-User Responsibility | 4.1, 4.2, 4.3, 4.4 | verify-pillar4.py | ✅ Complete |
 
 ## 🔍 One-Command Verification
 
-Run the complete framework verification:```bash
+Run the complete framework verification:
+
+```bash
 # Install verification tools
 pip install jep-verification
 
@@ -192,12 +147,13 @@ python tests/verify-all-pillars.py
 AGENTIC AI FRAMEWORK VERIFICATION
 ================================
 ✅ Pillar 1: All 4 requirements met
-✅ Pillar 2: All 4 requirements met  
+✅ Pillar 2: All 4 requirements met
 ✅ Pillar 3: All 4 requirements met
 ✅ Pillar 4: All 4 requirements met
 ================================
 FULL COMPLIANCE VERIFIED
-================================```
+================================
+```
 
 ## 📬 Contact
 
