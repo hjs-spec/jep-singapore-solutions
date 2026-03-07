@@ -10,9 +10,9 @@ This repository provides complete **Judgment Event Protocol (JEP)** implementati
 
 | Framework | Issuer | JEP Solution |
 |------|----------|-------------|
-| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [Agentic AI Accountability Implementation →](/singapore/agentic-framework) |
-| **AI Verify Testing Framework** | IMDA | [AI Verify Accountability Plugin →](/singapore/ai-verify) |
-| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit Evidence Export →](/singapore/aim-toolkit) |
+| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [Agentic AI Accountability Implementation →](/singapore/agentic-framework/README.md) |
+| **AI Verify Testing Framework** | IMDA | [AI Verify Accountability Plugin →](/singapore/ai-verify/README.md) |
+| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit Evidence Export →](/singapore/aim-toolkit/README.md) |
 
 ## 🔍 Why JEP?
 
@@ -41,7 +41,7 @@ cd jep-singapore-solutions
 pip install jep-protocol
 
 # Run Singapore framework verification
-python tests/verify-singapore-compliance.py
+python singapore/agentic-framework/tests/verify-all-pillars.py
 ```
 
 ## 🏛️ Governance
@@ -58,9 +58,9 @@ JEP is stewarded by **HJS Foundation LTD** (Singapore CLG), a non-profit organiz
 
 | Framework | Core Requirement | JEP Feature | Verification |
 |-----------|-----------------|-------------|--------------|
-| **Agentic AI Framework** | Meaningful human oversight | `delegate()` primitive + Ed25519 signature | [verify-agentic.py](/singapore/agentic-framework/tests/verify-agentic.py) |
-| **AI Verify** | Accountability principle | Four primitives + audit chain | [verify-ai-verify.py](/singapore/ai-verify/tests/verify-ai-verify.py) |
-| **AIM Toolkit** | 49 accountability checks | Complete responsibility records | [verify-aim.py](/singapore/aim-toolkit/tests/verify-aim.py) |
+| **Agentic AI Framework** | Meaningful human oversight | `delegate()` primitive + Ed25519 signature | [verify-agentic.py](/singapore/agentic-framework/tests/verify-all-pillars.py) |
+| **AI Verify** | Accountability principle | Four primitives + audit chain | [verify-ai-verify.py](/singapore/ai-verify/accountability-plugin.py) |
+| **AIM Toolkit** | 49 accountability checks | Complete responsibility records | [verify-aim.py](/singapore/aim-toolkit/export-script.py) |
 
 ## 📬 Contact
 
@@ -78,7 +78,19 @@ jep-singapore-solutions/
 │   │   ├── README.md                     # Solution overview
 │   │   ├── mapping.md                     # Detailed mapping to framework
 │   │   ├── implementation/                 # Core implementation
-│   │   └── examples/                       # Industry use cases
+│   │   │   └── accountability.py          # Accountability implementation
+│   │   ├── examples/                       # Industry use cases
+│   │   │   ├── financial-services.py
+│   │   │   ├── healthcare.py
+│   │   │   ├── public-sector.py
+│   │   │   ├── cpf-integration.py
+│   │   │   ├── iras-integration.py
+│   │   │   └── smart-nation-integration.py
+│   │   └── tests/                          # Verification scripts
+│   │       ├── verify-all-pillars.py
+│   │       ├── verify-mas-compliance.py
+│   │       ├── verify-moh-compliance.py
+│   │       └── verify-govtech-compliance.py
 │   ├── ai-verify/                         # AI Verify Framework
 │   │   ├── README.md                      # Solution overview
 │   │   ├── accountability-plugin.py        # AI Verify plugin
