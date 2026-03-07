@@ -320,7 +320,7 @@ python aim-toolkit/export-script.py --company "DBS Bank" --period Q1-2026
 | [examples/financial-services.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/examples/financial-services.py)| Complete banking example with MAS compliance |
 | [examples/healthcare.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/examples/healthcare.py) | Complete healthcare example with MOH compliance |
 | [examples/public-sector.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/examples/public-sector.py) | Complete public sector example with GovTech compliance |
-| [tests/verify-all-pillars.py](/singapore/agentic-framework/tests/verify-all-pillars.py) | One-command verification script |
+| [tests/verify-all-pillars.py](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/tests/verify-all-pillars.py)| One-command verification script |
 
 ## 🚦 Getting Started Path
 
