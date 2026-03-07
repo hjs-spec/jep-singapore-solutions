@@ -315,7 +315,7 @@ python aim-toolkit/export-script.py --company "DBS Bank" --period Q1-2026
 
 | File | Description |
 |------|-------------|
-| [mapping.md](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/framework-agentic/mapping.md) | Detailed mapping to all 16 framework requirements with code examples |
+| [mapping.md](https://github.com/hjs-spec/jep-singapore-solutions/blob/main/singapore/agentic-framework/mapping.md) | Detailed mapping to all 16 framework requirements with code examples |
 | [implementation/accountability.py](/singapore/agentic-framework/implementation/accountability.py) | Core implementation with comprehensive comments |
 | [examples/financial-services.py](/singapore/agentic-framework/examples/financial-services.py) | Complete banking example with MAS compliance |
 | [examples/healthcare.py](/singapore/agentic-framework/examples/healthcare.py) | Complete healthcare example with MOH compliance |
