@@ -35,11 +35,7 @@ proposal = tracker.judge_action(
 ``` | Check `use_case` and `assessment` fields in receipt |
 | **1.2 (Autonomy vs risk)** | Risk level field in every receipt | `receipt.compliance_binding.risk_level` | Verify risk level is set (LOW/MEDIUM/HIGH/CRITICAL) |
 | **1.3 (Scope boundaries)** | `resource` field defines the target scope | ```python
-receipt = tracker.log_decision(
-    resource="payment://international/<=10000",
-    ...
-)
-``` | Verify operation is within defined resource boundary |
+receipt = tracker.log_decision(resource="payment://international/<=10000",...)``` | Verify operation is within defined resource boundary |
 | **1.4 (Documentation)** | Complete audit trail with timestamps | All receipts are stored with immutable timestamps | Run `verify-audit-chain.py` |
 
 ### Evidence Files
@@ -78,8 +74,7 @@ receipt = tracker.delegate_action(
 print(f"Action: {proposal.action}")
 print(f"Amount: {proposal.amount} {proposal.currency}")
 print(f"Risk: {proposal.risk_level}")
-print(f"Reasoning: {proposal.reasoning}")
-``` | Verify receipt contains complete `compliance_binding` context |
+print(f"Reasoning: {proposal.reasoning}")```|Verify receipt contains complete `compliance_binding` context|
 | **2.3 (Documented oversight)** | Ed25519 signature provides non-repudiable proof | `receipt.signature` field | Run `verify-signature.py` |
 | **2.4 (Accountability chains)** | Complete chain from `judge` → `delegate` → `terminate` | ```json
 {
@@ -88,8 +83,7 @@ print(f"Reasoning: {proposal.reasoning}")
     {"action": "delegate", "actor": "human-456", "time": "t2"},
     {"action": "execute", "actor": "agent-123", "time": "t3"}
   ]
-}
-``` | Run `verify-accountability-chain.py` |
+}``` | Run `verify-accountability-chain.py` |
 
 ### Evidence Files
 
@@ -118,13 +112,11 @@ print(f"Reasoning: {proposal.reasoning}")
 judge()    # Assessment phase
 delegate() # Approval phase  
 execute()  # Action phase
-terminate() # Completion/termination phase
-``` | Run `verify-lifecycle.py` |
+terminate() # Completion/termination phase``` | Run `verify-lifecycle.py` |
 | **3.2 (Least privilege)** | Resource field limits scope of action | `resource` defines exactly what can be accessed | Verify resource strings match intended scope |
 | **3.3 (Audit logs)** | Complete immutable audit trail | All receipts stored with parent_hash chain | Run `verify-audit-integrity.py` |
 | **3.4 (Regular testing)** | Automated verification scripts | ```bash
-python tests/verify-all-controls.py
-``` | Script runs all control tests and generates report |
+python tests/verify-all-controls.py``` | Script runs all control tests and generates report |
 
 ### Evidence Files
 
@@ -161,15 +153,13 @@ python tests/verify-all-controls.py
   "operation": "APPROVE_LOAN",
   "reasoning": "Credit score > 700, DTI < 40%",
   "model_version": "v2.1.3"
-}
-``` | Parse receipt fields for human-readable explanations |
+}``` | Parse receipt fields for human-readable explanations |
 | **4.4 (Feedback)** | Extended fields support feedback integration | ```python
 receipt.add_feedback(
     user_id="customer-789",
     feedback_type="DISPUTE",
     timestamp=time.time()
-)
-``` | Check feedback fields in extended metadata |
+)``` | Check feedback fields in extended metadata |
 
 ### Evidence Files
 
@@ -190,9 +180,7 @@ receipt.add_feedback(
 
 ## 🔍 One-Command Verification
 
-Run the complete framework verification:
-
-```bash
+Run the complete framework verification:```bash
 # Install verification tools
 pip install jep-verification
 
@@ -209,8 +197,7 @@ AGENTIC AI FRAMEWORK VERIFICATION
 ✅ Pillar 4: All 4 requirements met
 ================================
 FULL COMPLIANCE VERIFIED
-================================
-```
+================================```
 
 ## 📬 Contact
 
