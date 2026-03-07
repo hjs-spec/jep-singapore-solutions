@@ -1,43 +1,94 @@
 # 🇸🇬 JEP Singapore Solutions
 
-**将新加坡AI治理框架转化为可验证的代码**
+**Turning Singapore's AI Governance Frameworks into Verifiable Code**
 
-## 📋 概述
+## 📋 Overview
 
-本仓库提供判断事件协议（JEP）与新加坡三大AI治理框架的完整对照解决方案，帮助企业用最低的技术成本满足最高的监管标准。
+This repository provides complete **Judgment Event Protocol (JEP)** implementations aligned with Singapore's three flagship AI governance frameworks. It helps organizations meet regulatory requirements with minimal technical overhead.
 
-### 🎯 覆盖的新加坡框架
+### 🎯 Covered Singapore Frameworks
 
-| 框架 | 发布机构 | JEP解决方案 |
+| Framework | Issuer | JEP Solution |
 |------|----------|-------------|
-| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [智能体AI问责实现 →](/framework-agentic) |
-| **AI Verify Testing Framework** | IMDA | [AI Verify问责插件 →](/framework-ai-verify) |
-| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit证据导出 →](/framework-aim-toolkit) |
+| **Model AI Governance Framework for Agentic AI (2026)** | IMDA | [Agentic AI Accountability Implementation →](/framework-agentic) |
+| **AI Verify Testing Framework** | IMDA | [AI Verify Accountability Plugin →](/framework-ai-verify) |
+| **AIM Toolkit (Competition & Consumer Protection)** | CCS + IMDA | [AIM Toolkit Evidence Export →](/framework-aim-toolkit) |
 
-## 🔍 为什么选择JEP？
+## 🔍 Why JEP?
 
-✅ **新加坡本土**：由新加坡注册的非营利基金会（HJS Foundation LTD）管理  
-✅ **密码学保障**：Ed25519签名确保证据不可抵赖、不可篡改  
-✅ **轻量集成**：3行代码，<1ms性能影响  
-✅ **开源免费**：Apache 2.0许可证，社区驱动  
+✅ **Singapore-born**: Stewarded by HJS Foundation LTD, a Singapore-registered non-profit CLG  
+✅ **Cryptographic Guarantees**: Ed25519 signatures ensure non-repudiation and tamper-proof evidence  
+✅ **Lightweight Integration**: 3 lines of code, <1ms performance impact  
+✅ **Open Source**: Apache 2.0 license, community-driven  
+✅ **Permanent Asset Lock**: Core assets (trademarks, domains, copyrights) cannot be sold or transferred  
 
-## 🏢 新加坡行业用例
+## 🏢 Singapore Industry Use Cases
 
-| 行业 | 监管机构 | 示例场景 | 解决方案 |
+| Industry | Regulator | Example Scenario | Solution |
 |------|----------|----------|----------|
-| 金融 | MAS | DBS银行贷款审批AI | [查看 →](/framework-agentic/examples/financial-services.py) |
-| 医疗 | MOH | 新加坡中央医院诊断AI | [查看 →](/framework-agentic/examples/healthcare.py) |
-| 公共部门 | GovTech | CPF智能咨询助手 | [查看 →](/framework-agentic/examples/public-sector.py) |
+| Financial Services | MAS | DBS Bank loan approval AI | [View →](/framework-agentic/examples/financial-services.py) |
+| Healthcare | MOH | Singapore General Hospital diagnostic AI | [View →](/framework-agentic/examples/healthcare.py) |
+| Public Sector | GovTech | CPF advisory AI assistant | [View →](/framework-agentic/examples/public-sector.py) |
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/hjs-spec/jep-singapore-solutions
 cd jep-singapore-solutions
 
-# 安装JEP核心库
+# Install JEP core library
 pip install jep-protocol
 
-# 运行新加坡框架验证
+# Run Singapore framework verification
 python tests/verify-singapore-compliance.py
+```
+
+## 🏛️ Governance
+
+JEP is stewarded by **HJS Foundation LTD** (Singapore CLG), a non-profit organization with permanent asset lock. The foundation's constitution explicitly prohibits:
+
+- Distribution of profits to members (Article 7B)
+- Transfer or sale of core assets (trademarks, domains, copyrights) (Article 67A)
+- Private distribution of assets upon dissolution (Article 68)
+
+**Registered Address**: 101 Thomson Road #28-03A, United Square, Singapore 307591
+
+## 📊 Framework Alignment Summary
+
+| Framework | Core Requirement | JEP Feature | Verification |
+|-----------|-----------------|-------------|--------------|
+| **Agentic AI Framework** | Meaningful human oversight | `delegate()` primitive + Ed25519 signature | [verify-agentic.py](/framework-agentic/tests/verify-agentic.py) |
+| **AI Verify** | Accountability principle | Four primitives + audit chain | [verify-ai-verify.py](/framework-ai-verify/tests/verify-ai-verify.py) |
+| **AIM Toolkit** | 49 accountability checks | Complete responsibility records | [verify-aim.py](/framework-aim-toolkit/tests/verify-aim.py) |
+
+## 📬 Contact
+
+- **Email**: singapore@humanjudgment.org
+- **GitHub**: [hjs-spec/jep-singapore-solutions](https://github.com/hjs-spec/jep-singapore-solutions)
+- **Foundation**: HJS Foundation LTD (Singapore CLG)
+
+## 📁 Repository Structure
+
+```
+jep-singapore-solutions/
+├── README.md                           # This file
+├── framework-agentic/                   # Agentic AI Framework (2026)
+│   ├── README.md                        # Solution overview
+│   ├── mapping.md                        # Detailed mapping to framework
+│   ├── implementation/                    # Core implementation
+│   └── examples/                          # Industry use cases
+├── framework-ai-verify/                  # AI Verify Framework
+│   ├── README.md                         # Solution overview
+│   ├── accountability-plugin.py           # AI Verify plugin
+│   └── sample-report.json                 # Report format
+└── framework-aim-toolkit/                # AIM Toolkit
+    ├── README.md                          # Solution overview
+    ├── 49-checks-mapping.md                # 49 checks alignment
+    └── export-script.py                     # AIM report export
+```
+
+---
+
+*Designed in Singapore 🇸🇬, for the world 🌏*
+```
