@@ -222,22 +222,3 @@ See full details: [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md)
 
 *This design philosophy is implemented in all JEP code and documentation. Every design choice is reflected in the protocol.*
 ```
-
----
-
-## 📄 在 `README.md` 增加入口
-
-在合适位置（比如在“1. Regulatory Compliance Matrix”之前）增加：
-
-```markdown
-## 📚 Design Philosophy
-
-Before diving into the technical details, we encourage you to read our **[Design Philosophy](docs/DESIGN_PHILOSOPHY.md)** — it explains the foundational choices behind JEP:
-
-- **Four primitives** — Why `judge`/`delegate`/`terminate`/`verify` are the complete grammar of accountability
-- **Cryptographic trust** — How Ed25519 + UUIDv7 make evidence tamper-proof and future-proof
-- **Maximum compatibility** — How one language serves multiple models, jurisdictions, and frameworks
-- **Neutral governance** — Why a non-profit foundation with 1/3 independent directors ensures long-term neutrality
-
-[➡️ Read the Design Philosophy](docs/DESIGN_PHILOSOPHY.md)
-```
