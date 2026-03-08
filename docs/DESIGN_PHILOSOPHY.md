@@ -218,7 +218,7 @@ See full details: [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md)
 ---
 
 **Document History**
-- 2026-03-08: Initial version for EUSAiR submission
+- 2026-03-08
 
 *This design philosophy is implemented in all JEP code and documentation. Every design choice is reflected in the protocol.*
 ```
