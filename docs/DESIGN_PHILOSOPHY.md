@@ -158,9 +158,9 @@ The same structured output maps to any regulatory framework:
 | Framework | JEP Implementation |
 |-----------|-------------------|
 
-| 🇸🇬 **Singapore Agentic Framework** | [`jep-singapore-solutions`](https://github.com/hjs-spec/jep-singapore-solutions) |
-| AS **Asean Agentic Framework** | [`jep-Asean-solutions`](https://github.com/hjs-spec/jep-asean-solutions) |
-| 🇰🇷 **Korea AI Basic Act** | [`jep-kr-solutions`](https://github.com/hjs-spec/jep-kr-solutions-) |
+|  **Singapore Agentic Framework** | [`jep-singapore-solutions`](https://github.com/hjs-spec/jep-singapore-solutions) |
+|  **Asean Agentic Framework** | [`jep-Asean-solutions`](https://github.com/hjs-spec/jep-asean-solutions) |
+|  **Korea AI Basic Act** | [`jep-kr-solutions`](https://github.com/hjs-spec/jep-kr-solutions-) |
 
 **Proof**: The same protocol serves three完全不同 frameworks without modification.
 
