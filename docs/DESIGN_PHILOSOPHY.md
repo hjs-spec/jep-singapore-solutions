@@ -284,10 +284,10 @@ See full details: [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md)
 | **Ed25519 signatures** | Non-repudiation, tamper-proof evidence |
 | **UUIDv7** | Temporal ordering, billion-scale audit |
 | **Algorithm-agnostic** | Future-proof, quantum-resistant |
-| **【新增】 Minimal information** | Collect only necessary responsibility fields |
-| **【新增】 Zero-knowledge verification** | Prove without exposing sensitive data |
-| **【新增】 Selective disclosure** | Encrypt payload, control access |
-| **【新增】 No central database** | Distributed, data sovereignty respected |
+| **Minimal information** | Collect only necessary responsibility fields |
+| **Zero-knowledge verification** | Prove without exposing sensitive data |
+| **Selective disclosure** | Encrypt payload, control access |
+| **No central database** | Distributed, data sovereignty respected |
 | **Model-agnostic** | Zero modification to existing AI |
 | **Jurisdiction-agnostic** | Deploy anywhere, sovereignty respected |
 | **Framework-agnostic** | One language, multiple regulations |
