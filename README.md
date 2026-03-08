@@ -115,4 +115,3 @@ jep-singapore-solutions/
 ---
 
 *Designed for Singapore 🇸🇬, for the world 🌏*
-```
