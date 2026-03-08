@@ -311,4 +311,3 @@ See full details: [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md)
 - 2026-03-08: Added Privacy by Design section
 
 *This design philosophy is implemented in all JEP code and documentation. Every design choice is reflected in the protocol.*
-```
