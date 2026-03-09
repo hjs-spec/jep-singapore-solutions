@@ -301,8 +301,8 @@ See full details: [`GOVERNANCE_CHARTER.md`](GOVERNANCE_CHARTER.md)
 - [RFC 8032: Ed25519](https://datatracker.ietf.org/doc/html/rfc8032)
 - [RFC 9562: UUIDv7](https://datatracker.ietf.org/doc/html/rfc9562)
 - [JSON-LD W3C Standard](https://www.w3.org/TR/json-ld11/)
-- 【新增】[GDPR Article 5: Principles relating to processing of personal data](https://gdpr-info.eu/art-5-gdpr/)
-- 【新增】[CCPA: California Consumer Privacy Act](https://oag.ca.gov/privacy/ccpa)
+- [GDPR Article 5: Principles relating to processing of personal data](https://gdpr-info.eu/art-5-gdpr/)
+- [CCPA: California Consumer Privacy Act](https://oag.ca.gov/privacy/ccpa)
 
 ---
 
