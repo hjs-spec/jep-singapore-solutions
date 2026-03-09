@@ -343,4 +343,3 @@ graph LR
 ---
 
 *This implementation is maintained by HJS Foundation LTD (Singapore CLG) as a public good for Singapore's AI ecosystem.*
-```
